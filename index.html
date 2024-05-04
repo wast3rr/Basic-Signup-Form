@@ -5,45 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="signup.css">
-    <link href="https://fonts.cdnfonts.com/css/norse" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/norse" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Roboto:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-    <div class="leftbox">
-        <div class="logobox">
-            <h1>ODIN</h1>
-        </div>
-    </div>
+    <div class="flex content">
+        <section class="leftbox flex">
+            <div class="logobox flex">
+                <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="Logo" style="padding-right:10px;height:2em;"/>
+                <h1>ODIN</h1>
+            </div>
+        </section><section class="rightbox"> 
+            <div class="faketext">
+                <p>This is not a real online service! You know you need something like this in your life to 
+                help you realize your deepest dreams. Sign up <em>now</em> to get started.
+                </p>
+                <p style="margin-bottom:75px;">You <em>know</em> you want to.</p>
+            </div>
 
-    <div class="rightbox"> 
-        <p>This is not a real online service! You know you need something like this in your life to 
-            help you realize your deepest dreams. Sign up <em>now</em> to get started.
-        </p>
-        <p>You <em>know</em> you want to.</p>
-
-        <div class="signupbox">
-            <h2>Let's do this!</h2>
             <form>
-                <label for="fname" class="firstline">FIRST NAME</label>
-                <input type="text" id="fname" name="fname" required />
+            <div class="signupbox flex">
+                <p style="margin-bottom:30px;">Let's do this!</p>
+                    <div class="signup flex">
+                        <div class="flex">
+                            <label for="fname">FIRST NAME</label>
+                            <input class="formitem" type="text" id="fname" name="fname" required />
+                        </div>
+                        
+                        <div class="flex">
+                            <label for="lname" class="firstline">LAST NAME</label>
+                            <input class="formitem" type="text" id="lname" name="lname" required />
+                        </div>
 
-                <label for="lname" class="firstline">LAST NAME</label>
-                <input type="text" id="lname" name="lname" required />
+                        <div class="flex">
+                            <label for="email" class="secondline">EMAIL</label>
+                            <input class="formitem" type="email" id="email" name="email" required />
+                        </div>
 
-                <label for="email" class="secondline">EMAIL</label>
-                <input type="email" id="email" name="email" required />
+                        <div class="flex">
+                            <label for="number" class="secondline">PHONE NUMBER</label>
+                            <input class="formitem" type="text" id="number" name="number" minlength="10" maxlength="10" pattern="^[0-9]*$" required />
+                        </div>
 
-                <label for="number" class="secondline">PHONE NUMBER</label>
-                <input type="text" id="number" name="number" minlength="9" maxlength="9" pattern="^[0-9]*$" required />
+                        <div class="flex">
+                            <label for="pwd" class="thirdline">PASSWORD</label>
+                            <input class="formitem" type="password" id="pwd" name="pwd" required />
+                        </div>
 
-                <label for="pwd" class="thirdline">PASSWORD</label>
-                <input type="password" id="pwd" name="pwd" required />
+                        <div class="flex">
+                            <label for="cpwd" class="thirdline">CONFIRM PASSWORD</label>
+                            <input class="formitem" type="password" id="cpwd" name="cpwd" required />
+                        </div>
+                    </div>
+            </div>
+            <input class="submit" type="submit" value="Create Account" />
 
-                <label for="cpwd" class="thirdline">CONFIRM PASSWORD</label>
-                <input type="password" id="cpwd" name="cpwd" required />
-
-                <input type="submit" value="Submit" />
+            <p class="loggedin">Already have an account? <a href="#">Log in</a></p>
             </form>
-        </div>
+        </section>
     </div>
 </body>
 </html>
